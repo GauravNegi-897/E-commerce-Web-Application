@@ -4,6 +4,8 @@ import Header from './components/Header'
 import Home from './pages/Home'
 import Footer from './components/Footer'
 import Cart from './pages/Cart'
+
+import axios from 'axios'
 import {
   createBrowserRouter,
   Outlet,
