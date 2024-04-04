@@ -11,10 +11,15 @@ const ProductsCard = ({product}) => {
         <div className='flex justify-between items-center'>
           <div>
           <h2 className='font-titleFont text-base font-bold'>
-            {product.title}
+            {product.title.substring(0,14)}
           </h2>
           </div>
-            <p className='font-semibold'>${product.price}</p>
+          <div className='flex gap-2 relative overflow-hidden w-28'>
+            <div>
+               <p className='font-semibold '>${product.price}</p>
+            </div>
+            <p className='absolute z-20 w-[100px] text-gray-700 hover:text-gray-900 flex items-center gap-1 top-0 transform -translate-x-32 group-hover:translate-x-0 transition-transform cursor-pointer duration-500'>add to cart</p>
+          </div>
         </div>
       </div>
     </div>
