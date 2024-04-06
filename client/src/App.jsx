@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Home from './pages/Home'
 import Footer from './components/Footer'
 import Cart from './pages/Cart'
+import Product from './components/product'
 
 import axios from 'axios'
 import {
@@ -20,6 +21,7 @@ const Layout = () =>{
     <div>
       <Header/>
       <Outlet/>
+      <ScrollRestoration/>
       <Footer/>
     </div>
   )
@@ -34,6 +36,10 @@ const router =createBrowserRouter([
         path:"/",
         element:<Home/>,
         loader: productsData
+      },
+      {
+        path:"/product/:id",
+        element:<Product/>
       },
       {
         path:"/Cart",
